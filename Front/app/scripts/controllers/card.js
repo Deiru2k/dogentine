@@ -5,9 +5,8 @@ angular.module('dogentineApp')
     var id = $stateParams.card_id;
     var Card = $resource('/api/cards/:cardId', {cardId: '@id'});
     var card = Card.get({'cardId': id});
-    $http.get('/api/wows')
-      .success(function (data) {
-        $scope.wows = data;
-      });
+    var Wow = $resource('/api/wows');
+    var wows = Wow.query();
     $scope.card = card;
+    $scope.wows = wows;
   });
