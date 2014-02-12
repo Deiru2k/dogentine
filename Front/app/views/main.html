@@ -1,0 +1,42 @@
+
+<div class="row" style="padding-bottom: 5px;">
+    <div class="text-center">
+        <b style="font-size: 45pt">Dogentine!</b>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 50px">
+    <div class="col-md-12" style="text-align: center">
+        <img class="img-circle doge" src="http://24.media.tumblr.com/b23ef59e7838d323c281de41a31d672a/tumblr_mw440xHVDP1t149l9o1_400.gif">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" style="text-align: center">
+        Total of {{cards}} cards and {{wows}} wowsers in the database!
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <form role="form">
+            <div class="form-group">
+                <label for="from">From</label>
+                <input type="text" class="form-control" id="from" placeholder="Doge" ng-model="card.from">
+            </div>
+            <div class="form-group">
+                <label for="to">To</label>
+                <input type="text" class="form-control" placeholder="You" id="to" ng-model="card.to">
+            </div>
+            <div class="form-group">
+                <label for="wish">Confession</label>
+                <textarea class="form-control"  placeholder="Plz, be my dogentine" id="wish" ng-model="card.wish"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="wowser">Additional Wowser <small class="badge badge-info">Optional</small></label>
+                <input type="text" class="form-control" placeholder="such valentine" id="wowser" ng-model="wowser">
+                <span class="help-block">Add this additional wowser to be displayed along with crazy interior monologue captions submitted by other people in a random way!</span>
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="submit_doge()">Cratae Dogentine!</button>
+        </form>
+    </div>
+</div>

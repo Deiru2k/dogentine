@@ -1,0 +1,23 @@
+<div class="panel panel-default gradient valentine">
+    <div class="panel-body">
+        <div class="row aligner" id="text">
+            <div dogetext ng-repeat="wow in wows">{{wow.wowser}}</div>
+            <div class="col-md-5">
+                <div class="wish">
+                    <p>{{card.wish}}</p>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <img src="http://24.media.tumblr.com/b23ef59e7838d323c281de41a31d672a/tumblr_mw440xHVDP1t149l9o1_400.gif"
+                     class="pull-right"
+                     style="position: relative; z-index: 0">
+            </div>
+        </div>
+        <div class="fromto aligner">
+            <span>
+                <b>From:</b> {{card.from}} <br>
+                <b>To:</b> {{card.to}}
+            </span>
+        </div>
+    </div>
+</div>
