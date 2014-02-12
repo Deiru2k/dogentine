@@ -1,7 +1,7 @@
 <div class="panel panel-default gradient valentine">
     <div class="panel-body">
         <div class="row aligner" id="text">
-            <div dogetext ng-repeat="wow in wows">{{wow.wowser}}</div>
+            <div dogetext ng-if="wows" ng-repeat="wow in wows">{{wow.wowser}}</div>
             <div class="col-md-5">
                 <div class="wish">
                     <p>{{card.wish}}</p>
