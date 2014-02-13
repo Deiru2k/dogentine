@@ -13,7 +13,7 @@ angular.module('dogentineApp')
     $http.get('/api/wows/count')
       .success(function (data) {
         $scope.wows = data.counter;
-      })
+      });
     $scope.submit_doge = function () {
       $http.post('/api/cards', $scope.card)
         .success(function (data) {

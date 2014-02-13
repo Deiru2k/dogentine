@@ -51,7 +51,9 @@ class WowsHandler(RequestHandler):
         if wows_count > 31:
             wows = []
             for x in range(30):
-                wow = yield Op(db.wows.find().limit(-1).skip(randrange(wows_count-1)).next)
+                wow_cursor = db.wows.find().limit(-1).skip(randrange(wows_count-1))
+                wow = yield Op(wow_cursor.to_list)
+                print wow
                 wows.append(wow)
         elif wows_count == 0:
             wows = []
