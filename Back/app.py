@@ -54,7 +54,7 @@ class WowsHandler(RequestHandler):
                 wow_cursor = db.wows.find().limit(-1).skip(randrange(wows_count-1))
                 wow = yield Op(wow_cursor.to_list)
                 print wow
-                wows.append(wow)
+                wows.append(wow[0])
         elif wows_count == 0:
             wows = []
         else:
